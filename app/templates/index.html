@@ -27,7 +27,7 @@
         container: '#hits',
         templates: {
           empty: 'No results!',
-          item: '<strong>Hit {{objectID}}</strong>: {{{_highlightResult.title.value}}}'
+          item: '{{{_highlightResult.title.value}}}'
         },
         escapeHits: true,
         transformItems: items => items.map(item => item)
