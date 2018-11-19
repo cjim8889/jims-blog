@@ -15,10 +15,9 @@ def newArticle():
         return jsonify({'status':'error'})
     
     art = Article(title=data['title'], content=data['content'])
-    db.session.add(art)
-    db.session.commit()
+    art.add()
 
-    retJson = {'id':art.id, 'title':art.title, 'content':art.content}
+    retJson = {'title':art.title, 'content':art.content}
 
 
 

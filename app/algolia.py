@@ -7,6 +7,6 @@ index.set_settings({"searchableAttributes": ["title", "content"]})
 def addArticle(art):
     
     data = {"title":art.title, "content":art.content}
-    res = index.add_object(data, art.id)
+    res = index.add_object(data)
 
     return res
